@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="ed12a468-ad53-4aef-b33c-3434e0b4f374" cx="64" cy="64" r="44.6"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fa9300" />
+      <stop offset=".8" stop-color="#f66a00" />
+      <stop offset="1" stop-color="#f63f00" />
+    </radialGradient>
+  </defs>
+  <g data-name="layer1" style="isolation:isolate">
+    <path fill="url(#ed12a468-ad53-4aef-b33c-3434e0b4f374)"
+      d="M22 78.3c10.6 22.2 44.2 38.4 65.8 26.4h.1l.4-.2.7-.5.2-.1a30.2 30.2 0 0 0 7-6 49.9 49.9 0 0 0 7.7-12.4l.7-1.7c8-20.2 4-46.3-18.6-59.1A39.4 39.4 0 0 0 44 26a53.6 53.6 0 0 0-10.8 9.1C21.5 48 16 65.6 22 78.3Z" />
+    <path fill="#c62792"
+      d="M85 33.1C81 34.2 74 30.6 70.7 29s-10.3-2.8-11.1-3.2 10 1.1 12.1-1.5-2.4-3.9-1.3-4.5 3.3.6 7.2 2.7 10.2 3.8 10.4 4.1-.7-.2-1 .8 7 4.8 10.8 9.8-5.6-6-13-4Z"
+      opacity=".4" style="mix-blend-mode:multiply" />
+    <path fill="#a80092" d="M86.6 29.8c3.2 3.9-7.9 2.8-13.2-1s5.6-8.4 13.2 1Z" opacity=".2"
+      style="mix-blend-mode:multiply" />
+    <path fill="#686336" d="M84.8 31.2c3-.5-4.3-6-9.3-5s3.8 5.9 9.3 5Z" />
+    <path fill="#61881d" d="M82.8 29.5c.5.6-2 1.4-4.3.2s-2.5-2-2-2.6 5.5 1.3 6.3 2.4Z" />
+    <path fill="#a85592"
+      d="m104.6 83.8-.7 1.6.7-1.6ZM22 78.3c12 25.3 54.2 42.9 74.2 19.5a49.9 49.9 0 0 0 7.7-12.2S85.4 106 52.2 81.5c-22-16.3-7-40.6-4-53.3 1-4.9-4.3-2.2-4.3-2.2-18.5 11.7-29.5 36-21.8 52.3Z"
+      opacity=".2" style="mix-blend-mode:multiply" />
+    <path fill="#ffd8ff"
+      d="M93.1 89.5c9.6-2 10-38.5 4.7-47.6S76 40.8 63.2 36.2 33 63.9 49.3 77s31 15.2 43.8 12.4Z"
+      opacity=".5" style="mix-blend-mode:soft-light" />
+    <path fill="#c62792"
+      d="M72 27.2c0-1.5-5.4-1.3-7.5-1s2 .7 5.6 2 1.9-1 1.9-1ZM87.3 26.7c-.4-.6-5.9-2.5-6.6-2.3s4 2.8 4.7 3 .7-.4 2-.7ZM87 31.5a44.1 44.1 0 0 0 7.4 3.2c1.5.3-3.5-3.8-5.5-5S87 31.6 87 31.6Z"
+      opacity=".3" style="mix-blend-mode:multiply" />
+    <path fill="#ffd8ff"
+      d="M80.2 35c1-.8-8-6-13.4-7s-10.6.3-11.6 2 9.9 4.4 14.2 4.9 10 .6 10.8.1ZM71 22.1c2 1.4-3.6 4.2-10.9 2.6s4.6-7.2 11-2.6ZM99.9 39.5c2.2 1.4-3-6.9-6.6-9.7s-5-2.7-5.5-2.3 3.7 3.3 7 6.3a37.4 37.4 0 0 1 5 5.7Z"
+      opacity=".5" style="mix-blend-mode:soft-light" />
+    <path fill="#ff7dff" d="M53.6 103.9c8.9 1-17.2-26.3-24.6-41s-12.1 4-5.4 18.3 30 22.7 30 22.7Z"
+      opacity=".5" style="mix-blend-mode:soft-light" />
+    <path fill="#a85592" d="M96.1 95.4c2.7-4.2-20.8-.5-39-9.8s-6.7 13 3 18.9 28.2 3.2 36-9Z"
+      opacity=".2" style="mix-blend-mode:multiply" />
+    <path fill="#ffbfff"
+      d="M22 78.3c10.6 22.2 44.2 38.4 65.8 26.4-4.5 2.3-20.7 8-47.8-11.5-31.8-22.8-7.9-56.7-7-58-11.5 12.6-17 30.4-11 43Z"
+      style="mix-blend-mode:soft-light" />
+    <path fill="#ffbfff" d="M27 86.4c3.3 4-2.2-13.2-4.7-18.8s-5 7.3 4.6 18.8Z"
+      style="mix-blend-mode:soft-light" />
+    <path fill="#fff" d="M79.8 54.4c3.1 1 2 4.5-1.2 4.9s-1.8-5.9 1.3-5Z" />
+    <path fill="#ffd8ff" d="M95.8 45c5.6 5.3 6.5 36.7-5.3 43.5S42.2 67.2 49 49.7 89.7 39 95.8 44.9Z"
+      opacity=".5" style="mix-blend-mode:soft-light" />
+    <path fill="#c62792" d="M43.9 26c10.8-5.5-8.4 22.9-5.3 40.2s-9.8-5.8-13.5-9.6S35.8 30 43.9 26Z"
+      opacity=".4" style="mix-blend-mode:multiply" />
+    <path fill="#fff" d="M105.2 63.8c2.3 5.5 2.4-5 .2-9s-.2 9-.2 9Z" />
+    <path fill="#ffbfff" d="M30 39.8c1.2-.6-2 4-4.5 10.2s-.8-7.3 4.6-10.2Z"
+      style="mix-blend-mode:soft-light" />
+    <path fill="#ffd8ff"
+      d="M105.8 66.8c.7.4-.4 7.5-6 20.3s-15.2 17.8-18 17.7-2.8-1.4-1.8-2.8 12-.9 17.8-11.7 3.8-13 4.8-16.5a33.7 33.7 0 0 1 3.3-7Z"
+      style="mix-blend-mode:soft-light" />
+    <path fill="#ffbfff" d="M40.3 84.7c1.7.5-.8-2.5-3.4-6.3s-4.4 3.8 3.4 6.3Z"
+      style="mix-blend-mode:soft-light" />
+    <g fill="#c62792" opacity=".4" style="mix-blend-mode:multiply">
+      <path
+        d="M90.3 87.6c.9-1.9.5-2.8-1-2.4s-2 3-1.1 3.3a1.7 1.7 0 0 0 2-1ZM72.5 90.5c1.6-.9-.5-2.4-1.4-2s-1 3.3 1.4 2ZM47.5 83c-.2 2.3-4.1.6-3.2-2.6s3.4.8 3.2 2.7ZM51.4 89.5c.9-.2-.6-1.8-1-1.2s.5 1.2 1 1.2ZM40.5 65.2c.5.7 1.2-1.4.5-1.4s-.8 1-.5 1.4ZM64.9 48.8c1 .7-.6 2.4-1.4 1.8s-1.3-3.7 1.4-1.8ZM54.7 59.5c1.2 1-.6 3.5-1.7 2.7s.1-4 1.7-2.7ZM40.5 54.8c1.2 1-.6 3.4-1.7 2.7s.1-4 1.7-2.7ZM103.3 49.3c1.2 1-.6 3.5-1.7 2.7s.1-4 1.7-2.7Z" />
+    </g>
+  </g>
+</svg>
