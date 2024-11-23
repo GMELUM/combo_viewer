@@ -8,21 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <style>
         body {
+            display: flex;
             font-family: sans-serif;
             justify-content: center;
-            align-items: center;
-            display: flex;
             flex-direction: column;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
+            align-items: center;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 600px;
+            height: 600px;
             justify-content: center;
-            align-items: center;
         }
 
         .svg-item {
@@ -41,19 +39,18 @@
         }
 
         .input_block {
-            width: 320px;
+            width: 600px;
             height: auto;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
-            margin: 86px 0;
         }
 
         .input_item {
             display: flex;
-            width: 86px;
-            height: 86px;
+            width: 140px;
+            height: 140px;
             margin: 10px;
             text-align: center;
             background: #f3f3f3;
@@ -64,8 +61,8 @@
         }
 
         .input_item img {
-            width: 66px;
-            height: 66px;
+            width: 100px;
+            height: 100px;
         }
 
         .input_item p {
@@ -101,79 +98,79 @@
 <body>
 
     <div class="container">
-        <div class="input_block" id="inputBlock">
-            <!-- Generated fruits will appear here -->
-        </div>
+    <div class="input_block" id="inputBlock">
+        <!-- Generated fruits will appear here -->
+    </div>
 
-        <button class="save-button" onclick="saveAsPng()">Сохранить как PNG</button>
-        <button class="copy-button" onclick="copyToClipboard()">Скопировать в буфер</button>
+    <button class="save-button" onclick="saveAsPng()">Сохранить как PNG</button>
+    <button class="copy-button" onclick="copyToClipboard()">Скопировать в буфер</button>
 
-        <script>
-            const inputBlock = document.getElementById('inputBlock');
+    <script>
+        const inputBlock = document.getElementById('inputBlock');
 
-            // Функция для отображения фруктов
-            function displayFruits(fruits) {
-                inputBlock.innerHTML = ''; // Очистить предыдущие элементы
-                fruits.forEach(fruit => {
-                    const fruitItem = document.createElement('div');
-                    fruitItem.classList.add('input_item');
-                    fruitItem.innerHTML = `
-                        <img src="./${fruit.replace(' ', '')}.svg" alt="${fruit}">
-                    `;
-                    inputBlock.appendChild(fruitItem);
-                });
-            }
+        // Функция для отображения фруктов
+        function displayFruits(fruits) {
+            inputBlock.innerHTML = ''; // Очистить предыдущие элементы
+            fruits.forEach(fruit => {
+                const fruitItem = document.createElement('div');
+                fruitItem.classList.add('input_item');
+                fruitItem.innerHTML = `
+                    <img src="./${fruit.replace(' ', '')}.svg" alt="${fruit}">
+                `;
+                inputBlock.appendChild(fruitItem);
+            });
+        }
 
-            // Функция для загрузки фруктов с API
-            async function fetchFruits() {
-                try {
-                    const response = await fetch('https://api.ratingtma.com/system.comboDay');
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch data from the API');
-                    }
-                    const data = await response.json();
-                    if (data.response && Array.isArray(data.response)) {
-                        displayFruits(data.response);
-                    } else {
-                        console.error('Invalid response format:', data);
-                    }
-                } catch (error) {
-                    console.error('Error fetching fruits:', error);
+        // Функция для загрузки фруктов с API
+        async function fetchFruits() {
+            try {
+                const response = await fetch('https://api.ratingtma.com/system.comboDay');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data from the API');
                 }
-            }
-
-            // Загружаем данные при загрузке страницы
-            window.addEventListener('DOMContentLoaded', fetchFruits);
-
-            // Функция для сохранения блока inputBlock как PNG
-            function saveAsPng() {
-                html2canvas(inputBlock).then(canvas => {
-                    const link = document.createElement('a');
-                    link.download = 'input_block.png';
-                    link.href = canvas.toDataURL('image/png');
-                    link.click();
-                }).catch(error => {
-                    console.error('Error generating PNG:', error);
-                });
-            }
-
-            // Функция для копирования блока inputBlock в буфер обмена
-            async function copyToClipboard() {
-                try {
-                    const canvas = await html2canvas(inputBlock);
-                    const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
-                    await navigator.clipboard.write([
-                        new ClipboardItem({
-                            'image/png': blob
-                        })
-                    ]);
-                    alert('Содержимое блока скопировано в буфер обмена!');
-                } catch (error) {
-                    console.error('Error copying to clipboard:', error);
-                    alert('Не удалось скопировать содержимое в буфер.');
+                const data = await response.json();
+                if (data.response && Array.isArray(data.response)) {
+                    displayFruits(data.response);
+                } else {
+                    console.error('Invalid response format:', data);
                 }
+            } catch (error) {
+                console.error('Error fetching fruits:', error);
             }
-        </script>
+        }
+
+        // Загружаем данные при загрузке страницы
+        window.addEventListener('DOMContentLoaded', fetchFruits);
+
+        // Функция для сохранения блока inputBlock как PNG
+        function saveAsPng() {
+            html2canvas(inputBlock).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'input_block.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            }).catch(error => {
+                console.error('Error generating PNG:', error);
+            });
+        }
+
+        // Функция для копирования блока inputBlock в буфер обмена
+        async function copyToClipboard() {
+            try {
+                const canvas = await html2canvas(inputBlock);
+                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                await navigator.clipboard.write([
+                    new ClipboardItem({
+                        'image/png': blob
+                    })
+                ]);
+                alert('Содержимое блока скопировано в буфер обмена!');
+            } catch (error) {
+                console.error('Error copying to clipboard:', error);
+                alert('Не удалось скопировать содержимое в буфер.');
+            }
+        }
+    </script>
     </div>
 
 
