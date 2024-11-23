@@ -40,7 +40,7 @@
 
         .input_block {
             width: 600px;
-            height: auto;
+            height: 240px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -143,7 +143,10 @@
 
         // Функция для сохранения блока inputBlock как PNG
         function saveAsPng() {
-            html2canvas(inputBlock).then(canvas => {
+            html2canvas(inputBlock, {
+                width: 600,
+                height: 240
+            }).then(canvas => {
                 const link = document.createElement('a');
                 link.download = 'input_block.png';
                 link.href = canvas.toDataURL('image/png');
@@ -156,7 +159,10 @@
         // Функция для копирования блока inputBlock в буфер обмена
         async function copyToClipboard() {
             try {
-                const canvas = await html2canvas(inputBlock);
+                const canvas = await html2canvas(inputBlock, {
+                    width: 600,
+                    height: 240
+                });
                 const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
                 await navigator.clipboard.write([
                     new ClipboardItem({
